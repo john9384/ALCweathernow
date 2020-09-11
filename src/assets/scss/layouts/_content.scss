@@ -1,0 +1,42 @@
+.content {
+  grid-column: center-start / col-end 5;
+  grid-row: main-start/ main-end;
+  position: relative;
+  padding: 2rem;
+  padding-bottom: 10rem;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  scrollbar-color: black transparent;
+  &::-webkit-scrollbar {
+    width: 0;
+    &:hover {
+      width: 10px;
+    }
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $color-pry;
+  }
+  &__head {
+    position: relative;
+    width: 100%;
+    height: 50%;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 1px rgba($color-pry, 0.2);
+    background-color: rgba($color-pry, 0.2);
+  }
+  @media screen and (max-width: $res-medium) {
+    grid-column: center-start/ center-end;
+  }
+  @media screen and (max-width: $res-small) {
+    margin-top: 40px;
+  }
+}
+.content-other {
+  margin-top: 3rem;
+  &__head {
+    font-size: 3rem;
+    padding: 0;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+  }
+}

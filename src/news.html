@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="assets/img/wn.PNG" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="css/style.comp.css" />
+    <title>WeatherNow</title>
+    <link rel="manifest" href="manifest.webmanifest" />
+  </head>
+  <body>
+    <div class="container--grid">
+      <header class="header">
+        <div class="container--flex">
+          <h1 class="logo">WeatherNow</h1>
+          <form class="search">
+            <input type="text" class="search__input" />
+            <button type="submit" class="search__button">
+              <i class="fa fa-search search__icon"></i>
+            </button>
+          </form>
+          <nav class="nav">
+            <input
+              type="checkbox"
+              class="nav__checkbox"
+              id="nav-check"
+              placeholder="Location"
+            />
+            <label for="nav-check" class="nav__button"
+              ><span class="nav__icon"> &nbsp;</span></label
+            >
+            <div class="nav__menu">
+              <ul class="nav__list">
+                <li class="nav__item"><a href="index.html">Home</a></li>
+                <li class="nav__item"><a href="news.html">News</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <main class="content">
+        <div class="content-news">
+            <div class="loading" id="loading_temp">
+              <h2 class="loading__head">Fetching Top Article</h2>
+              <div class="loading__icon">
+                <span class="loading__icon--1">&nbsp;</span
+                ><span class="loading__icon--2">&nbsp;</span
+                ><span class="loading__icon--3">&nbsp;</span>
+              </div>
+        </div>
+      </main>
+      <div class="sidebar"></div>
+      <footer class="footer"></footer>
+    </div>
+    <script src="js/news.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>

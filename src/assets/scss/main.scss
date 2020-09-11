@@ -1,0 +1,24 @@
+@import "./abstracts/variables";
+@import "./base/base";
+@import "./base/animation";
+@import "./base/typo";
+
+@import "./components/btn";
+@import "./components/logo";
+@import "./components/search";
+@import "./components/nav";
+@import "./components/bg-video";
+@import "./components/card-large";
+@import "./components/card-small";
+@import "./components/loader";
+@import "./components/news-card";
+
+@import "./layouts/header";
+@import "./layouts/container";
+@import "./layouts/content";
+@import "./layouts/sidebar";
+@import "./layouts/footer";
+
+@import "./pages/home";
+
+@import "./utils/margins";

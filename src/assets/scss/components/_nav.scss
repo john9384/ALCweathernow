@@ -1,0 +1,113 @@
+.nav {
+  height: 100%;
+  flex: 0 0 30%;
+  display: flex;
+  flex-flow: row-reverse;
+  align-items: center;
+  position: relative;
+  @media screen and (max-width: $res-small) {
+    margin-right: -3rem;
+  }
+  &__checkbox {
+    display: none;
+  }
+  &__button {
+    height: 6rem;
+    width: 6rem;
+    background-color: transparent;
+    z-index: 1000;
+  }
+  &__menu {
+    max-height: 0;
+    width: 0;
+    padding: 2rem;
+    background-color: $color-pry;
+    position: absolute;
+    top: 1rem;
+    right: 0;
+    transition: all 0.5s;
+    z-index: 999;
+    > * {
+      display: none;
+      animation: appear 1s;
+    }
+  }
+  &__icon,
+  &__icon::before,
+  &__icon::after {
+    width: 3rem;
+    height: 3px;
+    background-color: white;
+    transition: all 0.5s;
+  }
+  &__icon {
+    display: inline-block;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+
+    z-index: inherit;
+    &::before {
+      content: "";
+      position: absolute;
+      top: -1rem;
+      left: 0;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 1rem;
+      left: 0;
+    }
+  }
+  &__checkbox:checked ~ &__menu {
+    max-height: 30rem;
+    width: 20rem;
+    > * {
+      display: block;
+    }
+  }
+  &__checkbox:checked + &__button,
+  &__checkbox:checked + &__button &__icon {
+    background-color: transparent;
+  }
+  &__checkbox:checked + &__button &__icon::before {
+    top: 0;
+    transform: rotate(135deg);
+  }
+
+  &__checkbox:checked + &__button &__icon::after {
+    top: 0;
+    transform: rotate(-135deg);
+  }
+
+  &__list {
+    margin-top: 4rem;
+    list-style: none;
+    width: 100%;
+  }
+  &__item {
+    padding: 1rem 1rem;
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-bottom: 1px solid white;
+    display: flex;
+    align-items: center;
+    transition: all 0.5s;
+    cursor: pointer;
+    &:hover {
+      background-color: skyblue;
+    }
+    a {
+      align-content: center;
+    }
+  }
+  .fa {
+    font-size: 2rem;
+    margin-right: 0.5rem;
+  }
+}

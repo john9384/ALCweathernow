@@ -1,0 +1,7 @@
+.logo {
+  font-size: 3rem;
+  @media screen and (max-width: $res-small) {
+    font-size: 2.5rem;
+    margin-left: -3rem;
+  }
+}
